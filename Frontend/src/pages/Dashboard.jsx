@@ -6,10 +6,10 @@ const Dashboard = () => {
     const { user, logout } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    if (!user) {
-        navigate("/login");
-        return null;
-    }
+    // if (!user) {
+    //     navigate("/login");
+    //     return null;
+    // }
 
     return (
         <div>
