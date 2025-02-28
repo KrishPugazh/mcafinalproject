@@ -1,0 +1,15 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sideBar {
+    width: 250px;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+.mainBar {
+    flex: 1;
+    padding: 20px;
+}
