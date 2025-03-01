@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Enables scrolling */
+}
+
+.home-container {
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh; /* Ensures content grows beyond viewport */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+
+
+/* Header Section */
+.home-header {
+    background-color: rgba(255, 255, 255, 0.522);
+    color: #51C587;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.home-header:hover {
+    background-color:  #EFF8F4;
+}
+
+.home-header h1 {
+    font-size: 40px;
+    font-family:  'Poppins', sans-serif;
+    letter-spacing: 20px;
+}
+.home-header h1:hover {
+    color: #242c52; /* Change text color on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    cursor: pointer;
+}
+
+.home-header p:hover {
+    color: #242c52; /* Change text color on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    cursor: pointer;
+}
+
+.home-header p{
+    letter-spacing: 20px;
+}
+
+/* Quick Links */
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.link-card {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    min-width: 120px; /* Ensures consistent sizing */
+    text-align: center;
+}
+
+.link-card:hover {
+    transform: scale(1.05);
+}
+
+/* Announcements */
+.announcements {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-height: 200px; /* Limits height for better scroll effect */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.announcements::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+
+.announcements h2 {
+    color: #333;
+}
+
+.announcements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.announcements li {
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 10px;
+    }
+
+    .quick-links {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .link-card {
+        width: 80%;
+    }
+
+    .announcements {
+        max-height: 150px;
+    }
+}
+
+
+/* MNC Logos Grid */
+.mnc-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    max-height: 250px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    animation: fadeIn 1.5s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.mnc-logos:hover {
+    background-color:  #EFF8F4;
+}
+
+/* Fade-in effect for smooth appearance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.mnc-logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* Floating effect to make logos look lively */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Bounce effect on hover */
+.mnc-logo img:hover {
+    transform: scale(1.1);
+    animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1.1); }
+    50% { transform: scale(1.2); }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mnc-logos {
+        overflow-x: scroll;
+        max-width: 100%;
+    }
+
+    .mnc-logo img {
+        height: 60px;
+    }
+}
+
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.home-content-a {
+    height: 200px;
+    width: 60%;
+
+    overflow-y: auto;
+}
+
+.home-content-a::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.home-content-a h1 {
+    position: sticky;
+    text-align: left;
+    margin-bottom: 2%;
+}
+
+.home-content-a p {
+    text-align: justify;
+}
+
+.home-content-b {
+    overflow-y: auto;
+}
+.home-content-b::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+
+
+
+.footer {
+    background-color: #7a9abb; /* Dark Blue  #2C3E50*/
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Keyframes to animate the appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #F39C12;
+    border-bottom: 2px solid #F39C12;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ecf0f1;
+}
+
+.footer-section a {
+    color: #1ABC9C; /* Teal color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer-section {
+        flex: 1 1 45%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        max-width: 100%;
+    }
+}

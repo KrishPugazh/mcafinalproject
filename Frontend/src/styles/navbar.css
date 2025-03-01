@@ -4,7 +4,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 250px;
+    width: 20%;
     height: 100vh;
     background-color: #FFFFFF;
     color: grey;
@@ -18,12 +18,13 @@
     border-right: 2px solid lightgrey;
 }
 
-.navbar:hover {
+/* .navbar:hover {
     scrollbar-color: lightgrey transparent;
-}
+} */
 
 .navbar::-webkit-scrollbar {
-    width: 8px;
+    width: 0;
+    height: 0;
     display: none;
 }
 
@@ -48,14 +49,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 2px solid lightgrey;
+    /* border-bottom: 2px solid lightgrey; */
     position: sticky;
     top: -20px;
     background-color: white;
     z-index: 10;
     padding-bottom: 10px;
-    
-    
 }
 
 .nav-logo img {
@@ -68,7 +67,7 @@
     display: none;
     background: none;
     border: none;
-    color: grey;
+    color: rgb(28, 193, 75);
     font-size: 1.5rem;
     cursor: pointer;
     position: absolute;
@@ -111,6 +110,7 @@
 
 .icon {
     font-size: 1.2rem;
+    margin-right: 10px;
 }
 
 /* Responsive Design */

@@ -1,8 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaHome, FaBook, FaBriefcase, FaTrophy, FaUniversity, FaFootballBall, FaUsers, FaFileAlt, FaClipboardList, FaLightbulb, FaCalendarAlt, FaUserGraduate, FaSignOutAlt, FaBars, FaTimes } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { 
+    FaHome, FaBook, FaBriefcase, FaTrophy, FaUniversity, FaFootballBall, 
+    FaUsers, FaFileAlt, FaClipboardList, FaLightbulb, FaCalendarAlt, 
+    FaUserGraduate, FaSignOutAlt 
+} from "react-icons/fa";
 import "../styles/navbar.css";
-import kctlogo from "../assets/kctlogo.png"
+import kctlogo from "../assets/kctlogo.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,22 +17,22 @@ const Navbar = () => {
                 <img src={kctlogo} alt="KCT Logo" className="logo" />
             </div>
             <button className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
-                {isOpen ? <FaTimes /> : <FaBars />}
+                {isOpen ? "X" : "☰"}
             </button>
             <ul className={isOpen ? "nav-links open" : "nav-links"}>
-                <li><Link to="/home"><FaHome className="icon" /> Home</Link></li>
-                <li><Link to="/courses"><FaBook className="icon" /> Courses</Link></li>
-                <li><Link to="/placement"><FaBriefcase className="icon" /> Placement</Link></li>
-                <li><Link to="/achievements"><FaTrophy className="icon" /> Achievements</Link></li>
-                <li><Link to="/campus"><FaUniversity className="icon" /> Campus</Link></li>
-                <li><Link to="/sports"><FaFootballBall className="icon" /> Sports</Link></li>
-                <li><Link to="/clubs"><FaUsers className="icon" /> Clubs & Forums</Link></li>
-                <li><Link to="/examinations"><FaFileAlt className="icon" /> Examinations</Link></li>
-                <li><Link to="/exam-hub"><FaClipboardList className="icon" /> Exam Preparation Hub</Link></li>
-                <li><Link to="/career"><FaLightbulb className="icon" /> Career Guidance</Link></li>
-                <li><Link to="/events"><FaCalendarAlt className="icon" /> Events</Link></li>
-                <li><Link to="/alumni"><FaUserGraduate className="icon" /> Alumni</Link></li>
-                <li><Link to="/logout"><FaSignOutAlt className="icon" /> Logout</Link></li>
+                <li><NavLink to="/dashboard/home"><FaHome className="icon" /> Home</NavLink></li>
+                <li><NavLink to="/dashboard/course"><FaBook className="icon" /> Courses</NavLink></li>
+                <li><NavLink to="/dashboard/placement"><FaBriefcase className="icon" /> Placement</NavLink></li>
+                <li><NavLink to="/dashboard/achievements"><FaTrophy className="icon" /> Achievements</NavLink></li>
+                <li><NavLink to="/dashboard/campus"><FaUniversity className="icon" /> Campus</NavLink></li>
+                <li><NavLink to="/dashboard/sports"><FaFootballBall className="icon" /> Sports</NavLink></li>
+                <li><NavLink to="/dashboard/clubs"><FaUsers className="icon" /> Clubs & Forums</NavLink></li>
+                <li><NavLink to="/dashboard/examinations"><FaFileAlt className="icon" /> Examinations</NavLink></li>
+                <li><NavLink to="/dashboard/exam-hub"><FaClipboardList className="icon" /> Exam Preparation Hub</NavLink></li>
+                <li><NavLink to="/dashboard/career"><FaLightbulb className="icon" /> Career Guidance</NavLink></li>
+                <li><NavLink to="/dashboard/events"><FaCalendarAlt className="icon" /> Events</NavLink></li>
+                <li><NavLink to="/dashboard/alumni"><FaUserGraduate className="icon" /> Alumni</NavLink></li>
+                <li><NavLink to="/logout"><FaSignOutAlt className="icon" /> Logout</NavLink></li>
             </ul>
         </nav>
     );

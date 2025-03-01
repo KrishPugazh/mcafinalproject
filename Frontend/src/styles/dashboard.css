@@ -13,3 +13,29 @@
     flex: 1;
     padding: 20px;
 }
+
+.topBar {
+    display: flex;
+    justify-content: space-between; /* Pushes items apart */
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+    
+
+.bottomBar {
+    
+}
+
+#logoutBtn {
+    color: white;
+    background-color: #51C587;
+    font-size: 20px;  /* Reduce text size */
+    padding: 5px 10px; /* Reduce padding */
+    border: none;
+    border-radius: 5px; /* Optional: rounded corners */
+    cursor: pointer;
+}
+
+
